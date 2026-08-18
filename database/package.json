@@ -1,0 +1,10 @@
+{
+  "name": "placement-seed-generator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "bcryptjs": "^2.4.3"
+  }
+}
