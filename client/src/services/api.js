@@ -14,9 +14,10 @@ api.interceptors.response.use(
   (res) => res,
   (error) => {
     if (error.response?.status === 401) {
+      const hadToken = !!localStorage.getItem('token');
       localStorage.removeItem('token');
       localStorage.removeItem('user');
-      if (!window.location.pathname.startsWith('/login')) {
+      if (hadToken && !window.location.pathname.startsWith('/login')) {
         window.location.href = '/login';
       }
     }
